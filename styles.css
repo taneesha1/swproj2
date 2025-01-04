@@ -186,7 +186,6 @@ nav {
 .btn:is(:focus,:hover) {
     background-color: #E5A186;
     border-radius: #E5A186;
-    padding: 20px 30px;
     color: white;
 }
 

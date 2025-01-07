@@ -404,3 +404,14 @@ nav {
     margin-right: 3%;
   }
 }
+
+#username{
+
+  height: 3rem;
+  text-align: left;
+}
+
+#password{
+  height: 3rem;
+
+}

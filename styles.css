@@ -405,13 +405,8 @@ nav {
   }
 }
 
-#username{
 
+#username,#password,#signup-username,#signup-name,#signup-password,#signup-confirm-password{
   height: 3rem;
-  text-align: left;
 }
 
-#password{
-  height: 3rem;
-
-}

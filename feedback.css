@@ -23,12 +23,12 @@ html {
 .container{
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    height: 750px;
-    width: 900px;
+    width: 60vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 5rem;
 }
 .feedback-head{
     font-size:large;
@@ -37,17 +37,17 @@ html {
 .first-q{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 1px 10px 1px 10px;
     gap: 12px;
 }
 .choice{
-    width: 600px;
-    height: 100px;
+    width: 40vw;
+    height: 30vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .l1,.l2,.l3,.l4{
     display: flex;

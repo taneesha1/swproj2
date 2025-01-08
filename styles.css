@@ -408,5 +408,5 @@ nav {
 
 #username,#password,#signup-username,#signup-name,#signup-password,#signup-confirm-password{
   height: 3rem;
+  padding-left: 1rem;
 }
-

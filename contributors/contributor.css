@@ -3,59 +3,16 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background: #637090;
+    background: #edeef1;
     overflow-x: hidden; 
   }
     
   /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;  
-    background-image: linear-gradient(to right,#f3c3f9, #2a2a48,#c3d2f9);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height:90px;
-    width: 100%;
-    box-sizing: border-box; 
-    border-bottom:#ffcc00 5px solid;
-  }
   
-  .navbar-logo {
-    font-size: 25px;
-    font-weight: 600;
-    color: #FFD369;
-  }
-  
-  .navbar-links {
-    
-    display: flex;
-    gap: 30px;  
-    list-style: none;
-    margin-right:20px;
-  }
-  
-  .navbar-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    transition: color 0.3s ease;
-   
-  }
-  .navbar-link:hover{
-    text-decoration: underline;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-link:hover {
-    color: #FFD369;
-  }
   
   h1 {
-    align-items: center;
+    text-align: center;
+    
     justify-content: center;
     font-size: 3rem;
     color: #fff;
@@ -99,6 +56,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    margin: 30px;
   }
   
   .contributor-card:hover {
@@ -122,6 +80,11 @@ body {
     margin: 10px 0;
   }
   
+
+  .container {
+    margin-top: 100px;
+    padding: 20px;
+  }
   .contributor-card a {
     display: inline-block;
     margin: 5px 0;
@@ -180,39 +143,8 @@ body {
   
   /* Responsive Design for Mobile */
   @media (max-width: 768px) {
-  
-    .navbar-logo {
-      font-size: 24px;
-  }
-  
-  .navbar-links {
     
-      display: none;
-      flex-direction: column;
-      background-color: #1B1B2F;
-      position: absolute;
-      top: 65%;
-      right: 0;
-      width: 100%;
-      padding: 20px 0;
-      gap: 10px;
-      margin: 30px -5px;
-    width: 100%;
-      
-  }
-  
-  .navbar-link{
-    padding: 5px 5px;
-  }
-  
-  .navbar-links.show {
-      display: flex;
-      
-  }
-  
-  .hamburger {
-      display: flex;
-  }
+   
     .container {
       padding: 20px;
     }
@@ -236,12 +168,4 @@ body {
   }
   
     
-  /* Footer */
-  .footer {
-    border-top:#ffcc00 5px solid;
-    margin-top: 20px;
-    text-align: center;
-    padding: 20px;
-    background-color: #01070b;
-    color: #F3F4F6;
-  }
+  

@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #637090;
+    overflow-x: hidden; 
+  }
+    
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;  
+    background-image: linear-gradient(to right,#f3c3f9, #2a2a48,#c3d2f9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height:90px;
+    width: 100%;
+    box-sizing: border-box; 
+    border-bottom:#ffcc00 5px solid;
+  }
+  
+  .navbar-logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: #FFD369;
+  }
+  
+  .navbar-links {
+    
+    display: flex;
+    gap: 30px;  
+    list-style: none;
+    margin-right:20px;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+   
+  }
+  .navbar-link:hover{
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #FFD369;
+  }
+  
+  h1 {
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  
+  h2{
+
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    margin: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+  }
+  
+  /* Contributor Card Grid */
+  .contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: calc(10px + 1vw); 
+    justify-items: center; 
+    align-items: center;
+    width: 100%; 
+  }
+  
+  /* Contributor Card Styling */
+  .contributor-card {
+    border:red 8px double;
+    background: #f8e6e6;
+    color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .contributor-card:hover {
+    
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .contributor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #121115; 
+    margin-bottom: 15px;
+  }
+  
+  .contributor-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .contributor-card a {
+    display: inline-block;
+    margin: 5px 0;
+    color: #d82de7;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 10px;
+    border: #f5cbcb 2px solid;
+    padding: 4px;
+  }
+  
+  .contributor-card a:hover {
+    color: #004e64; 
+    text-decoration: none;
+  }
+  
+  /* Animated Button */
+  .button {
+    background: #004e64;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.2s ease, background 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    background: #004e64; 
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+  
+    .navbar-logo {
+      font-size: 24px;
+  }
+  
+  .navbar-links {
+    
+      display: none;
+      flex-direction: column;
+      background-color: #1B1B2F;
+      position: absolute;
+      top: 65%;
+      right: 0;
+      width: 100%;
+      padding: 20px 0;
+      gap: 10px;
+      margin: 30px -5px;
+    width: 100%;
+      
+  }
+  
+  .navbar-link{
+    padding: 5px 5px;
+  }
+  
+  .navbar-links.show {
+      display: flex;
+      
+  }
+  
+  .hamburger {
+      display: flex;
+  }
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  
+    /* Adjust the grid gap for mobile */
+    .contributors-grid {
+      gap: calc(10px + 2vw); 
+    }
+  }
+  
+  /* Responsive Design for Tablet/Desktop */
+  @media (min-width: 768px) {
+    .contributors-grid {
+      gap: calc(10px + 1.5vw); 
+    }
+  }
+  
+    
+  /* Footer */
+  .footer {
+    border-top:#ffcc00 5px solid;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #01070b;
+    color: #F3F4F6;
+  }

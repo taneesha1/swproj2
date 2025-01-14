@@ -73,26 +73,34 @@
                 return;
             }
 
+            const payload = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            console.log('Request payload:', payload);
+
             try {
-                const response = await axios.post('http://localhost:3000/api/v1/auth/register', {
-                    username: username,
-                    email: email,
-                    password: password
-                });
+                const response = await axios.post('http://localhost:3000/api/v1/auth/register', payload);
+                console.log('Response:', response);
 
                 if (response.data.success) {
                     alert('Sign up successful! Please log in.');
-                    console.log(response.data)
+                    console.log(response.data);
                     // window.location.href = 'login.html';
                 } else {
                     alert('Sign up failed: ' + response.data.message);
                 }
             } catch (error) {
                 if (error.response) {
+                    console.error('Error response:', error.response);
                     alert('Error: ' + error.response.data.message);
                 } else if (error.request) {
+                    console.error('Error request:', error.request);
                     alert('No response from server. Please try again later.');
                 } else {
+                    console.error('Error message:', error.message);
                     alert('An error occurred: ' + error.message);
                 }
             }

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link
-      rel="icon"
-      href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
-    />
+    <link rel="icon" href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Signup Form</title>
@@ -20,7 +17,6 @@
 <body>
     <header>
         <nav>
-            <!-- Wrap the logo text in an anchor tag -->
             <a href="#hero" class="logo">मातृबोधः</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -31,18 +27,20 @@
                         <li><a href="countingpage.html">Counting</a></li>
                         <li><a href="#">Days</a></li>
                         <li><a href="#">Activities</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="#" >Contact</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-            <div class="toggle-menu">☰</div>
+            <div class="toggle-menu">&#9776;</div>
         </nav>
     </header>
+
     <div class="wrapper">
         <h1>Login</h1>
-        <form action="#" onsubmit="return handleLogin(event)">
-            <input type="text" placeholder="Username" id="username" required>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <input type="text" placeholder="Email" id="email" required>
             <input type="password" placeholder="Password" id="password" required>
             <div class="recover">
                 <a href="#">Forgot Password</a>
@@ -50,28 +48,50 @@
             <button type="submit">Login</button>
         </form>
         <div class="member">
-            Not a member? <a href="./signup.html">
-                Register Now
-            </a>
+            Not a member? <a href="./signup.html">Register Now</a>
         </div>
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent the form from submitting
-            const username = document.getElementById('username').value;
+        async function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            
-            if (username && password) {
-                alert('Login successful!');
-            } else {
-                alert('Please enter your username and password.');
+
+            try {
+                const response = await axios.post('http://localhost:3000/api/v1/auth/login', {
+                    email: email,
+                    password: password
+                });
+
+                if (response.data.success) {
+                    alert('Login successful!');
+                    // Redirect to dashboard or another page
+                    console.log(response.data)
+                    // window.location.href = './index.html';
+                } else {
+                    alert('Login failed: ' + response.data.message);
+                }
+            } catch (error) {
+                if (error.response) {
+                    // Server responded with a status other than 2xx
+                    alert('Error: ' + error.response.data.message);
+                } else if (error.request) {
+                    // No response received
+                    alert('No response from server. Please try again later.');
+                } else {
+                    // Something else happened
+                    alert('An error occurred: ' + error.message);
+                }
             }
         }
     </script>
-     <div class="footer">
-    Made with ❤️ by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
-</div>
+
+    <div class="footer">
+        Made with ❤️ by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
+    </div>
 
     <script src="scrollscript.js"></script>
     <script src="audio.js"></script>

@@ -25,6 +25,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>मातृबोधः</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Scroll to Top Button */
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 120px;
+            right: 37px;
+            height: 50px;
+            width: 50px;
+            background-color: rgb(218, 128, 76);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+  
+        #scrollToTopBtn:hover {
+            background-color: rgb(218, 128, 76);
+        }
+    </style>
+  
+
+</head>
+<body>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="animations.css" />
     <link rel="stylesheet" href="scontentcss.css" />
@@ -307,6 +339,94 @@
       </div>
     </div>
   </section>
+    </section>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <footer class="main-footer">    
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>मातृबोधः</h3>
+                <p>Educating children through India's timeless wisdom and cultural heritage.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#wisdom">About Us</a></li>
+                    <li><a href="#content">Our Courses</a></li>
+                    <!-- need to add contact page link -->
+                    <li><a href="#hero">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Learning Paths</h4>
+                <ul>
+                    <!-- need to add respective page link -->
+                    <li><a href="countingpage.html">Counting</a></li>
+                    <li><a href="#hero">Days</a></li>
+                    <li><a href="#hero">Activities</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+                </ul>
+            </div>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>मातृबोधः</h3>
+          <p>
+            Educating children through India's timeless wisdom and cultural
+            heritage.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/Anjaliavv51/Matrubodhah"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://github.com/Anjaliavv51/Matrubodhah"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://github.com/Anjaliavv51/Matrubodhah"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://github.com/Anjaliavv51/Matrubodhah"
+              target="_blank"
+              aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://github.com/Anjaliavv51/Matrubodhah"
+              target="_blank"
+              aria-label="Linkedin"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
 
   <footer class="main-footer">
     <div class="footer-content">
@@ -386,6 +506,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+
     <script>
       function toggleNavbarIcon() {
         const button1 = document.getElementById('navbarIcon1');
@@ -397,5 +518,41 @@
       }
     </script>
 </body>
+
+    <script
+      src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js"
+      async
+    ></script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+      
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+      
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+      </script>
+
+
+</body>
+</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
 
 </html>

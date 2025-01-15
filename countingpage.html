@@ -128,6 +128,27 @@
         .card[for="c10"]{
             background-image: url(FOUR.png);
         }
+
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 120px;
+            right: 37px;
+            height: 50px;
+            width: 50px;
+            background-color: rgb(218, 128, 76);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+  
+        #scrollToTopBtn:hover {
+            background-color: rgb(218, 128, 76);
+        }
     </style>
 </head>
 <body>
@@ -253,6 +274,9 @@
             </label>
         </div>
     </div>
+ 
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
     <footer class="main-footer">    
         <div class="footer-content">
             <div class="footer-section">
@@ -301,6 +325,26 @@
             <p>&copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a></p>
         </div>
     </footer>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+      
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+      
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+      </script>
     <script>
         let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')

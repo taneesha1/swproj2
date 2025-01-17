@@ -113,16 +113,28 @@
 }
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 0.5rem;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
-  background-color: #ffffff00;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
 }
 
 .heart {
-  display: inline-block;
-  animation: beat 1s ease infinite;
+    display: inline-block;
+    animation: beat 1s ease infinite;
+}
+
+@keyframes beat {
+    0%,
+    50%,
+    100% {
+        transform: scale(1);
+    }
+
+    25%,
+    75% {
+        transform: scale(1.2);
+    }
 }
 form {
    padding-bottom: 199px;

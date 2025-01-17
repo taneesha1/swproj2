@@ -3,7 +3,7 @@
    Footer Section
    ======================== */
 .main-footer {
-  background-color: linear-gradient(to right, #11cb2a, #19be50);;
+  background-color: #f8f8f8;
   padding: 4rem 5%;
   color: #333;
   font-family: 'Arial', sans-serif;
@@ -65,7 +65,7 @@
 }
 
 .social-links a {
-  color: #f7f5f5;
+  color: #333;
   font-size: 1.5rem;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;

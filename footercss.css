@@ -139,7 +139,7 @@ form::before {
    bottom: 0;
    left: 0%;  /* Adjust this value to control the starting point of the border */
    width: 92%;  /* Adjust this value to control the length of the border */
-   border-bottom: 1px solid #fafafa;  /* Your border color */
+   border-bottom: 1px solid #333;  /* border color */
 }
 
 form input{
@@ -196,7 +196,7 @@ h4 {
 .underline {
   width: 45%; /* Adjusted to make the red line shorter */
   height: 3px;
-  background: #767676;
+  background: #e9beba;
   border-radius: 3px;
   position: absolute;
   bottom: -8px; /* Adjusted to position the underline correctly below the text */
@@ -208,7 +208,7 @@ h4 {
 .underline span {
   width: 15px;
   height: 100%;
-  background: #fff;
+  background: #d25523;
   border-radius: 3px;
   position: absolute;
   top: 0;

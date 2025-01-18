@@ -3,6 +3,12 @@ Cultural Education contents in Indian philosophy or spirituality related to mate
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
+<tr>
+<td align="center">
+<a href="https://www.socialwinterofcode.com/"><img src="https://github.com/Rakesh9100/Beautiify/assets/73993775/9235952f-9062-4352-992d-eb34e4d60283" height="140px" width="180px" alt="SWOC2025"></a><br><sub><b>SWOC 2k25</b></sub>
+</td>
+</tr>
+
 <table align="center">
     <thead align="center">
         <tr border: 1px;>

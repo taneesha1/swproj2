@@ -94,7 +94,7 @@ It is an online platform which enables you to get eduction in cultural way.</p>
 <table>
 <tr>
 <td align="center">
-<a href="https://github.com/Anjaliavv51/"><img src="https://avatars.githubusercontent.com/u/73993775?v=4" height="140px" width="140px" alt="Rakesh Roshan"></a><br><sub><b>Rakesh Roshan</b><br><a href="https://www.linkedin.com/in/rakesh-roshan-9100/"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73993775/278833250-adb040ea-e3ef-446e-bcd4-3e8d7d4c0176.png" width="45px" height="45px"></a></sub>
+<a href="https://github.com/Anjaliavv51/"><img src="https://avatars.githubusercontent.com/" height="140px" width="140px" alt="Pavananjali"></a><br><sub><b>Pavananjali</b><br><a href="www.linkedin.com/in/lakshmi-pavananjali-pamidi-766760296"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73993775/278833250-adb040ea-e3ef-446e-bcd4-3e8d7d4c0176.png" width="45px" height="45px"></a></sub>
 </td>
 </tr>
 </table>

@@ -573,8 +573,8 @@ nav {
 
 #scrollButton {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 115px;
+    right: 28px;
     width: 60px;
     height: 60px;
     display: flex;
@@ -584,7 +584,7 @@ nav {
     z-index: 1000;
     opacity: 0; /* Initially hidden */
     pointer-events: none; /* Prevent interaction when hidden */
-    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    transition: opacity 0.7s ease; /* Smooth fade-in effect */
 }
 
 /* Scroll */
@@ -600,9 +600,9 @@ nav {
     border-radius: 50%;
     background: conic-gradient(
         orange 0deg,
-        orange var(--scroll-progress, 0deg),
-        #ddd var(--scroll-progress, 0deg),
-        #ddd 360deg
+        #fd835c var(--scroll-progress, 0deg),
+        #dddddd00 var(--scroll-progress, 0deg),
+        #dddddd00 360deg
     );
     transform: rotate(-90deg); /* Start animation from top */
     display: flex;

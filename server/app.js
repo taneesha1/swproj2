@@ -20,14 +20,16 @@ app.use(express.json({extend: false}));
     
 //routes importing
 import { userRouter } from './routes/user.routes.js';
+import { profilerouter } from './routes/profile.routes.js';
 
 
 app.get('/',async(req,res)=>{
-    res.status(200).send("express and mongo")
+    res.status(200).send("express server is running")
 })
 
 
 //routes declare
 app.use("/api/v1/auth", userRouter)
+app.use("/api/v1/profile",profilerouter)
 
 export {app}

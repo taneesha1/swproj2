@@ -129,27 +129,6 @@
             background-image: url(FOUR.png);
         }
 
-        /* Scroll to Top Button */
-        #scrollToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 120px;
-            right: 37px;
-            height: 50px;
-            width: 50px;
-            background-color: rgb(218, 128, 76);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-  
-        #scrollToTopBtn:hover {
-            background-color: rgb(218, 128, 76);
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -344,41 +323,11 @@
   </div>
 </footer>
 
+
+
+        
     
-    <script>
-        // Get the button
-        let mybutton = document.getElementById("scrollToTopBtn");
-      
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        };
-      
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.onclick = function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        };
-      </script>
-    <script>
-        let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
-
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
-
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) 
-})
-    </script>
-    <script src="index.js"></script>
+<script src="index.js"></script>
 </body>
 
 </html>

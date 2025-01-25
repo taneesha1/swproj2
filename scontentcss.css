@@ -68,6 +68,11 @@
   transition: max-height 0.3s ease-in-out;
 }
 
+.roadmap-card .card-text.expanded {
+  max-height: 1000px !important;
+  transition: max-height 0.8s ease-in-out;
+}
+
 .read-more {
   display: block;
   width: calc(100% - 30px);

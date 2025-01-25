@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (card !== currentCard) {
                     const cardText = card.querySelector('.card-text');
                     const cardButton = card.querySelector('.read-more');
-                    cardText.style.maxHeight = '86px';
+                    cardText.classList.remove('expanded');
+                    cardText.style.maxHeight = '96px';
                     cardButton.textContent = 'Read More';
                 }
             });
@@ -29,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Then toggle the current card
             if (this.textContent === 'Read More') {
                 // Expand
-                currentCardText.style.maxHeight = currentCardText.scrollHeight + 'px';
+                currentCardText.classList.add('expanded');
                 this.textContent = 'Read Less';
             } else {
                 // Collapse
-                currentCardText.style.maxHeight = '86px';
+                currentCardText.classList.remove('expanded');
+                currentCardText.style.maxHeight = '96px';
                 this.textContent = 'Read More';
             }
         });
@@ -45,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         allCards.forEach(card => {
             const cardText = card.querySelector('.card-text');
             const cardButton = card.querySelector('.read-more');
-            cardText.style.maxHeight = '86px';
+            cardText.classList.remove('expanded');
+            cardText.style.maxHeight = '96px';
             cardButton.textContent = 'Read More';
         });
     });

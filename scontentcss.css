@@ -63,7 +63,7 @@
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
-  max-height: 86px;
+  max-height: 96px;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }

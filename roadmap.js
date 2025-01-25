@@ -11,18 +11,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const readMoreButtons = document.querySelectorAll('.read-more');
     readMoreButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const card = this.closest('.roadmap-card');
-            const cardText = card.querySelector('.card-text');
+            const currentCard = this.closest('.roadmap-card');
+            const currentCardText = currentCard.querySelector('.card-text');
             
+            // First collapse all other expanded cards in the same slide
+            const currentSlide = this.closest('.carousel-item');
+            const otherCards = currentSlide.querySelectorAll('.roadmap-card');
+            otherCards.forEach(card => {
+                if (card !== currentCard) {
+                    const cardText = card.querySelector('.card-text');
+                    const cardButton = card.querySelector('.read-more');
+                    cardText.style.maxHeight = '86px';
+                    cardButton.textContent = 'Read More';
+                }
+            });
+            
+            // Then toggle the current card
             if (this.textContent === 'Read More') {
                 // Expand
-                cardText.style.maxHeight = cardText.scrollHeight + 'px';
+                currentCardText.style.maxHeight = currentCardText.scrollHeight + 'px';
                 this.textContent = 'Read Less';
             } else {
                 // Collapse
-                cardText.style.maxHeight = '86px';
+                currentCardText.style.maxHeight = '86px';
                 this.textContent = 'Read More';
             }
+        });
+    });
+
+    // Collapse all cards when changing slides
+    document.getElementById('roadmapCarousel').addEventListener('slide.bs.carousel', function() {
+        const allCards = document.querySelectorAll('.roadmap-card');
+        allCards.forEach(card => {
+            const cardText = card.querySelector('.card-text');
+            const cardButton = card.querySelector('.read-more');
+            cardText.style.maxHeight = '86px';
+            cardButton.textContent = 'Read More';
         });
     });
 

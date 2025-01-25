@@ -24,7 +24,7 @@ import { profilerouter } from './routes/profile.routes.js';
 
 
 app.get('/',async(req,res)=>{
-    res.status(200).send("express server is running")
+    res.status(200).send("express and mongodb server is running")
 })
 
 
@@ -33,3 +33,4 @@ app.use("/api/v1/auth", userRouter)
 app.use("/api/v1/profile",profilerouter)
 
 export {app}
+

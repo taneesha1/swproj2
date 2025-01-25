@@ -10,35 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="activities.css">
   <link rel="stylesheet" href="footercss.css">
+  <link rel="stylesheet" href="Scroll.css">
   <title>Spiritual Activities</title>
-  <style>
-    /* Scroll to Top Button */
-    #scrollToTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 85px;
-        right: 30px;
-        height: 55px;
-        width: 55px;
-        background-color: rgb(218, 128, 76);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 15px;
-    }
-    #scrollToTopBtn:hover {
-        background-color: rgb(218, 128, 76);
-    }
-</style>
 </head>
 <body>
-
-  <button id="scrollToTopBtn" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up fa-xl"></i>
-  </button>
-
+   <!-- Scroll -->
+    <div id="scrollButton" class="hidden">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="arrow">↑</div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav>
           <!-- Wrap the logo text in an anchor tag -->
@@ -225,24 +208,6 @@
       </p>
     </div>
   </footer>
-  <script>
-    // Get the button
-    let mybutton = document.getElementById("scrollToTopBtn");
-  
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    };
-  
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.onclick = function () {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
-  </script>
+  <script src="Scroll.js"></script>
 </body>
 </html>

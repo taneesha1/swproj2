@@ -75,7 +75,8 @@
                     <li><a href="feedback.html">Feedback</a></li>
                 </ul>
             </li>
-            <li><a href="login.html">Login</a></li>
+            <li id="loginlist" ><a href="login.html">Login</a></li>
+            <li id="profilelist"><a  href="profile.html">Profile</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html" >Contact</a></li>
         </ul>
@@ -435,6 +436,20 @@ scrollButton.addEventListener('click', () => {
     });
 });
 
+    </script>
+
+    <script>
+      const login = document.getElementById("loginlist")
+      const profile = document.getElementById("profilelist")
+      if (localStorage.getItem("token")) {
+        console.log("user logged in")
+        login.style.display = "none"
+        profile.style.display="block"
+      }else{
+        console.log("user not logged in")
+        login.style.display = "block"
+        profile.style.display="none"
+      }
     </script>
   </body>
 </html>

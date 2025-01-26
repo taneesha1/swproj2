@@ -83,24 +83,91 @@
             </div>
 
         </div>
+        
 
     </div>
 
 
-    <script>
-        
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+    <script type="module" >
+        import {link} from "./Baselink.js"
+        console.log(link)
+        const signUpButton = document.getElementById("signUp");
+        const signInButton = document.getElementById("signIn");
+        const container = document.getElementById("container");
 
-signUpButton.addEventListener('click',()=>
-    container.classList.add('right-panel-active')
-);
-signInButton.addEventListener('click',()=>
-    container.classList.remove('right-panel-active')
-);
+        // Sign Up Logic
+        const signUpForm = document.querySelector(".sign-up-container form");
+        signUpForm.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent page reload
+      
+          const username = signUpForm.querySelector('input[placeholder="Name"]').value;
+          const email = signUpForm.querySelector('input[placeholder="Email"]').value;
+          const password = signUpForm.querySelector('input[placeholder="Password"]').value;
+      
+          try {
+            const response = await fetch("https://matrubodhah-tau.vercel.app/api/v1/auth/register", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username, email, password }),
+            });
+      
+            if (response.ok) {
+              const data = await response.json();
+              alert("Sign Up Successful! Please Sign In.");
+              container.classList.remove("right-panel-active"); // Switch to Sign In view
+            } else {
+              const error = await response.json();
+              alert(`Sign Up Failed: ${error.message}`);
+            }
+          } catch (err) {
+            alert("Error: Unable to connect to the server.");
+            console.error(err);
+          }
+        });
 
-    </script>
+        // Toggle Sign In/Sign Up View
+        signUpButton.addEventListener("click", () =>
+          container.classList.add("right-panel-active")
+        );
+        signInButton.addEventListener("click", () =>
+          container.classList.remove("right-panel-active")
+        );
+      
+      
+        // Sign In Logic
+        const signInForm = document.querySelector(".sign-in-container form");
+        signInForm.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent page reload
+      
+          const email = signInForm.querySelector('input[placeholder="Email"]').value;
+          const password = signInForm.querySelector('input[placeholder="Password"]').value;
+      
+          try {
+            const response = await fetch("https://matrubodhah-tau.vercel.app/api/v1/auth/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password }),
+            });
+      
+            if (response.ok) {
+              const data = await response.json();
+                console.log(data)
+              alert(`Welcome back, ${data.user.username}!`);
+              console.log(data.token)
+              localStorage.setItem("token", data.token)
+              // Redirect to the user dashboard
+              window.location.href = "/index.html";
+            } else {
+              const error = await response.json();
+              alert(`Sign In Failed: ${error.message}`);
+            }
+          } catch (err) {
+            alert("Error: Unable to connect to the server.");
+            console.error(err);
+          }
+        });
+      </script>
+      
      <div class="footer">
     Made with ❤️ by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
 </div>

@@ -1,9 +1,9 @@
-window.onload = function(){
+window.onload = function () {
     document.getElementById("hero").classList.add('scrolled')
 }
 
 
-document.addEventListener("scroll", function() {
+document.addEventListener("scroll", function () {
 
     const wisdomContent = document.querySelector(".wisdom-section .wisdom-content");
     const wisdomImage = document.querySelector(".wisdom-image");
@@ -20,7 +20,7 @@ document.addEventListener("scroll", function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.roadmap-card');
 
     const observer = new IntersectionObserver((entries) => {
@@ -37,3 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+
+const tl = gsap.timeline();
+tl.from(".logo", {
+    y: -50,
+    duration: 1,
+    opacity: 0
+})
+
+tl.from(".nav-links li", {
+    y: -30,
+    duration: 1,
+    stagger: 0.15,
+    opacity: 0
+})

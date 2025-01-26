@@ -1,4 +1,4 @@
-<!-- Scroll to Top Button -->
+
 
 const scrollButton = document.getElementById('scrollButton');
 const outerCircle = document.querySelector('.outer-circle');
@@ -25,3 +25,17 @@ window.addEventListener('scroll', () => {
 scrollButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const tl = gsap.timeline();
+tl.from(".logo", {
+    y: -50,
+    duration: 1,
+    opacity: 0
+})
+
+tl.from(".nav-links li", {
+    y: -30,
+    duration: 1,
+    stagger: 0.15,
+    opacity: 0
+})

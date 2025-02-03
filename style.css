@@ -10,6 +10,7 @@
 }
 .click:hover{
     text-decoration: underline;
+    color:red;
 }
 body{
     font-family: 'Montserrat',sans-serif;

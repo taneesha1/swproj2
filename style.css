@@ -8,6 +8,10 @@
 .click{
     color: blue;
 }
+.click:hover{
+    text-decoration: underline;
+    color:red;
+}
 body{
     font-family: 'Montserrat',sans-serif;
     background: #f6f5f7;
